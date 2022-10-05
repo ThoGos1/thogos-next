@@ -1,19 +1,35 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import logo from '../public/logo.png'
 
 export default function Header() {
   return (
-    <div className="head">
-              <header>
-        <Link href="/">
-          <a>
-            <h1>
-              <span>Just Add</span>
-              <span>Marmite</span>
-            </h1>
-            <h2>Spread The Joy</h2>
-          </a>
-        </Link>
-      </header>
+
+    <div className='navbar'>
+
+      <div className='toolbar'>
+
+        <div style={{ cursor: "pointer" }}>
+          <Link href='/'>
+            <Image src={logo} height={60} width={60} />
+          </Link>
+        </div>
+
+        <nav>
+          <Link href='/'>
+            <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>Python</a>
+          </Link>
+        </nav>
+
+        <div style={{ width: "78%" }}></div>
+
+        <p className='langchange'>danish</p>
+
+      </div>
+      
     </div>
+
+
+
   )
 }

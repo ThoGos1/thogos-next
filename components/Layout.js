@@ -5,9 +5,9 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
 
-      <Header/>
+      <Header className="head"/>
 
-      <div className="page-content">
+      <div style={{ marginTop: "64px" }}>
         { children }
       </div>
 
