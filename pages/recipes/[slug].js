@@ -14,7 +14,7 @@ const client = createClient({
 
 
 export const getStaticPaths = async () => {
-  const res = await client.getEntries({ content_type: 'recipe' });
+  const res = await client.getEntries({ content_type: 'note' });
 
   const paths = res.items.map(item => {
     return {
@@ -31,7 +31,7 @@ export const getStaticPaths = async () => {
 
 export async function getStaticProps({ params }) {
   // This returns an array, but there is only on this I know, don't worry about it
-  const { items } = await client.getEntries({ content_type: 'recipe', 'fields.slug': params.slug });
+  const { items } = await client.getEntries({ content_type: 'note', 'fields.slug': params.slug });
 
   // This says if there isn't an item, aka recipie, then just redirect to the homepage.
   if(!items.length) {
@@ -76,25 +76,12 @@ export default function RecipeDetails({ recipe }) {
     return <Skeleton/>
   }
 
-  const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields;
+  const { title, method } = recipe.fields;
 
   return (
     <div>
         <div className='banner'>
-            <Image src={ 'https:' + featuredImage.fields.file.url }
-                width={featuredImage.fields.file.details.image.width}
-                height={featuredImage.fields.file.details.image.height}/>
-            
             <h2>{ title }</h2>
-        </div>
-
-        <div className='info'>
-            <p>Takes about { cookingTime } mins to cook</p>
-            <h3>ingredients</h3>
-
-            {ingredients.map(ing => (     // this works as a loop over all ingredients and then maps out each ingredient to the variable "ing"
-                <span key={ ing }>{ ing }</span>
-            ))}
         </div>
         
         <div className='method'>
