@@ -44,7 +44,7 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: { recipe: items[0] },
+    props: { note: items[0] },
     revalidate: 1 // This thing says that if data is change it will pull the new contentful data, but won't change if the page is visited within 1 second.
   }
 
@@ -69,14 +69,14 @@ const renderOption = {
 
 
 
-export default function RecipeDetails({ recipe }) {
-  //console.log(recipe);
+export default function NoteDetails({ note }) {
+  console.log(note);
 
-  if(!recipe) {
+  if(!note) {
     return <Skeleton/>
   }
 
-  const { title, method } = recipe.fields;
+  const { title, method } = note.fields;
 
   return (
     <div>
