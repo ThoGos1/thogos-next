@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
-          <div class="footms">
+          <div className="footms">
 
-            <div class="downbar">
+            <div className="downbar">
               <div style={{ width: "94%" }}></div>
-              <p class="copyright">© Thomas Gosvig 2022</p>
+              <p className="copyright">© Thomas Gosvig 2022</p>
             </div>
 
           </div>
