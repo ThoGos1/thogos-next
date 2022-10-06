@@ -18,7 +18,7 @@ export default function Header() {
         </div>
 
         <nav>
-          <Link href={'/'}>
+          <Link href={'/solver'}>
             <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>Python</a>
           </Link>
         </nav>
