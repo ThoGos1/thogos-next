@@ -8,6 +8,52 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Tester CSS*/
+.flex {
+  display: flex;
+  justify-content: center; /* This centers the content horizontally */
+  align-items: center; /* This centers the content vertically */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr; /* This creates three coloumns of 1fr, 500px, 1fr lengths */
+  grid-template-rows: 100px 200px; /* This creates two rows of 100px and 200px lengths */
+}
+
+.drop {
+  animation: dropIn 3s ease forwards;
+}
+@keyframes dropIn {
+  from {transform: translateY(-500px);}
+  to {transform: translateY(0);}
+}
+
+.dropDown {
+  opacity: 0;
+  visibility: hidden;
+}
+
+button:focus-within .dropDown {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Layout CSS */
