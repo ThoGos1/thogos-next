@@ -15,14 +15,6 @@ body {
   grid-template-rows: 1000px;
 }
 
-.drop {
-  animation: dropIn 3s ease forwards;
-}
-@keyframes dropIn {
-  from {transform: translateY(-500px);}
-  to {transform: translateY(0);}
-}
-
 .dropDown {
   opacity: 0;
   visibility: hidden;
@@ -49,7 +41,43 @@ button:focus-within .dropDown {
 
 
 
+/* Home Page CSS */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
 
+.logo-1 {
+  display: block;
+  font-size: 18px;
+}
+
+.logo-2 {
+  font-size: 56px;
+  font-weight: bold;
+  display: block;
+}
+
+.logo-3 {
+  letter-spacing: 20px;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 150px 50% 450px;
+}
+
+.drop {
+  animation: dropIn 3s ease forwards;
+}
+@keyframes dropIn {
+  from {transform: translateY(-500px);}
+  to {transform: translateY(0);}
+}
 
 
 
