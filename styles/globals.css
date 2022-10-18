@@ -21,6 +21,12 @@ body {
   grid-template-rows: 100px 200px; /* This creates two rows of 100px and 200px lengths */
 }
 
+.pageset {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1000px;
+}
+
 .drop {
   animation: dropIn 3s ease forwards;
 }
@@ -39,7 +45,9 @@ button:focus-within .dropDown {
   visibility: visible;
 }
 
-
+.sidebar {
+  background-color: aquamarine;
+}
 
 
 

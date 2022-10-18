@@ -1,9 +1,5 @@
-import Python from "../components/Python";
-
-var which = 'ice';
-
-
-
+import Link from "next/link"
+import Combust from "./solvers/combust"
 
 export default function Solver() {
     return (
@@ -11,31 +7,24 @@ export default function Solver() {
         <title>Solver</title>
         <h1>Solver</h1>
 
-        <Python which={which}/>
+        <div className="pageset">
+          <div className="sidebar">
+            Sidebar
+            <nav>
+              <Link href={'/solvers/combust'}>
+                <a style={{ marginRight: '16px', marginLeft: '16px' }}>Combustion Analysis</a>
+              </Link>
+            </nav>
+          </div>
+          
+          <div>
+            Specific Solver
 
-        <div className="flex">
-            sewey
+            <Combust/>
+
+          </div>
+          
         </div>
-
-        <p className="drop">down animation</p>
-
-        <div className="grid">
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-        </div>
-
-        <button>Press me
-            <div className="dropDown">
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-        </div>
-        </button>
 
 
       </div>  

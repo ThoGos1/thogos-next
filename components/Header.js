@@ -23,6 +23,12 @@ export default function Header() {
           </Link>
         </nav>
 
+        <nav>
+          <Link href={'/notelist'}>
+            <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>Notes</a>
+          </Link>
+        </nav>
+
         <div style={{ width: "78%" }}></div>
 
         <p className='langchange'>danish</p>
