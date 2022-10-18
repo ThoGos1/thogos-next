@@ -7,7 +7,7 @@ export default function Layout({ children }) {
 
       <Header className="head"/>
 
-      <div style={{ marginTop: "64px" }}>
+      <div className='pageset' style={{ marginTop: "64px" }}>
         { children }
       </div>
 

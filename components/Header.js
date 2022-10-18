@@ -17,6 +17,8 @@ export default function Header() {
           </Link>
         </div>
 
+        <div style={{ width: "39.05%" }}></div>
+
         <nav>
           <Link href={'/solver'}>
             <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>Python</a>
@@ -29,7 +31,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        <div style={{ width: "78%" }}></div>
+        <div style={{ width: "39%" }}></div>
 
         <p className='langchange'>danish</p>
 

@@ -1,14 +1,22 @@
-
+import SidebarSolv from "../../components/SidebarSolv"
 
 export default function Combust() {
-    return (
+  return (
       <div className="home">
-        <title>Combustion Solver</title>
-        <h1>Combustion Analysis</h1>
+      <title>Combust</title>
 
-        <p>hello from combust</p>
+      <div className="pageset">
+        <SidebarSolv/>
+        
+        <div>
+          <h1>heleofewofiweoifj</h1>
+          <p>Combust Solver</p>
+        </div>
+        
+      </div>
 
 
-      </div>  
-    )
-  }
+
+    </div>
+  )
+}

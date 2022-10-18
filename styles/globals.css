@@ -9,18 +9,6 @@ body {
 }
 
 /* Tester CSS*/
-.flex {
-  display: flex;
-  justify-content: center; /* This centers the content horizontally */
-  align-items: center; /* This centers the content vertically */
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 500px 1fr; /* This creates three coloumns of 1fr, 500px, 1fr lengths */
-  grid-template-rows: 100px 200px; /* This creates two rows of 100px and 200px lengths */
-}
-
 .pageset {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -47,6 +35,7 @@ button:focus-within .dropDown {
 
 .sidebar {
   background-color: aquamarine;
+  margin-right: 16px;
 }
 
 
