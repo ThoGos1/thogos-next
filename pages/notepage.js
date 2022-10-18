@@ -1,16 +1,16 @@
-import SidebarSolv from "../components/SidebarSolv"
+import SidebarNote from "../components/SidebarNote"
 
-export default function Solver() {
+export default function Notepage() {
     return (
       <div>
         <title>Solver</title>
 
         <div className="pageset">
           
-          <SidebarSolv/>
+          <SidebarNote/>
           
           <div>
-            Specific Solverde
+            Specific Note
           </div>
           
         </div>

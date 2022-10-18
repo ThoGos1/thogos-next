@@ -1,7 +1,12 @@
 import { createClient } from 'contentful';
 import NoteCard from '../components/NoteCard';
+import NoteDetails from './notes/[slug]';
 // first npm install contentful
 // then import the above thing and then make the function as below.
+
+
+// USELESS FILE NOW
+
 
 export async function getStaticProps() {
 
@@ -25,6 +30,22 @@ export async function getStaticProps() {
 }
 
 
+function UserGreeting(props) {
+  return <h1>Welcome back!</h1>;
+}
+
+function GuestGreeting(props) {
+  return <h1>Please sign up.</h1>;
+}
+
+
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
 
 export default function Notes({ notes }) {
   
@@ -32,10 +53,18 @@ export default function Notes({ notes }) {
   
   return (
     //This key thing is actually quite important, as the console will throw an error if not.
+
     <div>
-      { notes.map(note => (
-        <NoteCard key={note.sys.id} note={note} /> // The idea here is to have a recipe which is put into the component recipe for the RecipeCard component which then uses it to fetch the data, which keeps this file neat and cool.
-      )) }
+
+      <title>Notelist</title>
+
+      <div>
+        { notes.map(note => (
+          <NoteCard key={note.sys.id} note={note} /> // The idea here is to have a recipe which is put into the component recipe for the RecipeCard component which then uses it to fetch the data, which keeps this file neat and cool.
+        )) }
+      </div>
+      
+
     </div>
   )
 }

@@ -17,23 +17,25 @@ export default function Header() {
           </Link>
         </div>
 
-        <div style={{ width: "39.05%" }}></div>
+        <div style={{ width: "36.4%" }}></div>
+
+
+        <nav>
+          <Link href={'/notepage'}>
+            <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>S-Notes</a>
+          </Link>
+        </nav>
+
 
         <nav>
           <Link href={'/solver'}>
-            <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>Python</a>
+            <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>Problem Solvers</a>
           </Link>
         </nav>
 
-        <nav>
-          <Link href={'/notelist'}>
-            <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>Notes</a>
-          </Link>
-        </nav>
+        <div style={{ width: "35.5%" }}></div>
 
-        <div style={{ width: "39%" }}></div>
-
-        <p className='langchange'>danish</p>
+        <p className='langchange'>Danish</p>
 
       </div>
       

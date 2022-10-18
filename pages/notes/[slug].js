@@ -3,6 +3,7 @@ import Image from "next/image";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Skeleton from '../../components/Skeleton';
+import SidebarNote from '../../components/SidebarNote';
 
 
 // In this file, it's NOT placed inside a function like in index.js, because it's used twice.
@@ -80,13 +81,23 @@ export default function NoteDetails({ note }) {
 
   return (
     <div>
+      <title>{ title }</title>
+
+      <div className="pageset">
+        <SidebarNote/>
+
         <div>
-            <h2>{ title }</h2>
-        </div>
+          <div>
+              <h2>{ title }</h2>
+          </div>
         
-        <div>
-            <div>{ documentToReactComponents(method, renderOption) }</div>
+          <div>
+              <div>{ documentToReactComponents(method, renderOption) }</div>
+          </div>
         </div>
+
+
+      </div>
 
     </div>
   )

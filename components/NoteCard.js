@@ -7,9 +7,9 @@ export default function NoteCard({ note }) {
     
     
     return (
-        <div className="card">
-            <div className="content">
-                <div className="actions">
+        <div>
+            <div>
+                <div>
                     <Link href={ '/notes/' + slug }><a><h4>{ title }</h4></a></Link>
                 </div>
             </div>
