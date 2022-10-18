@@ -2,7 +2,7 @@ import SidebarSolv from "../../components/SidebarSolv"
 
 export default function Mech() {
     return (
-        <div className="home">
+        <div>
         <title>Mech</title>
 
         <div className="pageset">

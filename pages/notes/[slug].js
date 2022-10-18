@@ -80,11 +80,11 @@ export default function NoteDetails({ note }) {
 
   return (
     <div>
-        <div className='banner'>
+        <div>
             <h2>{ title }</h2>
         </div>
         
-        <div className='method'>
+        <div>
             <div>{ documentToReactComponents(method, renderOption) }</div>
         </div>
 

@@ -2,7 +2,7 @@ import SidebarSolv from "../../components/SidebarSolv"
 
 export default function Combust() {
   return (
-      <div className="home">
+      <div>
       <title>Combust</title>
 
       <div className="pageset">

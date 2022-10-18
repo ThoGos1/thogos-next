@@ -32,7 +32,7 @@ export default function Notes({ notes }) {
   
   return (
     //This key thing is actually quite important, as the console will throw an error if not.
-    <div className="recipe-list">
+    <div>
       { notes.map(note => (
         <NoteCard key={note.sys.id} note={note} /> // The idea here is to have a recipe which is put into the component recipe for the RecipeCard component which then uses it to fetch the data, which keeps this file neat and cool.
       )) }

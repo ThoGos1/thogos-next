@@ -1,8 +1,12 @@
 export default function Home() {
   return (
-    <div className="home">
+    <div>
       <title>Home</title>
-      <h1>ThoGos</h1>
+      
+
+
+
+
       <p className="drop">down animation</p>
       <p>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/></p>
     </div>  

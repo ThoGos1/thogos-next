@@ -2,7 +2,7 @@ import SidebarSolv from "../components/SidebarSolv"
 
 export default function Solver() {
     return (
-      <div className="home">
+      <div>
         <title>Solver</title>
 
         <div className="pageset">
