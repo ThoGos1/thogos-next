@@ -12,7 +12,7 @@ export default function Header() {
         <div style={{ cursor: "pointer" }}>
           <Link href={'/'}>
             <div>
-              <Image src={logo} height={60} width={60} />
+              <Image src={logo} height={60} width={60} alt="ThoGos-logo"/>
             </div>
           </Link>
         </div>

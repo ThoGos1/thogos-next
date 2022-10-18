@@ -1,9 +1,12 @@
 import SidebarSolv from "../../components/SidebarSolv"
+import Head from "next/head"
 
 export default function Combust() {
   return (
       <div>
-      <title>Combust</title>
+      <Head>
+        <title>Combust</title>
+      </Head>
 
       <div className="pageset">
         <SidebarSolv/>

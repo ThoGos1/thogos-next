@@ -1,7 +1,14 @@
+import Head from "next/head"
+
 export default function Home() {
   return (
     <div className="grid">
-      <title>Home</title>
+
+      <Head>
+        <title>Home</title>
+      </Head>
+
+      
       
       <div></div>
 

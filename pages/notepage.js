@@ -1,9 +1,12 @@
 import SidebarNote from "../components/SidebarNote"
+import Head from "next/head"
 
 export default function Notepage() {
     return (
       <div>
-        <title>Solver</title>
+        <Head>
+          <title>Notepage</title>
+        </Head>
 
         <div className="pageset">
           

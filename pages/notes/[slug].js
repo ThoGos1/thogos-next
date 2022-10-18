@@ -4,6 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import Skeleton from '../../components/Skeleton';
 import SidebarNote from '../../components/SidebarNote';
+import Head from "next/head"
 
 
 // In this file, it's NOT placed inside a function like in index.js, because it's used twice.
@@ -62,6 +63,7 @@ const renderOption = {
           src={`https:${node.data.target.fields.file.url}`}
           height={node.data.target.fields.file.details.image.height}
           width={node.data.target.fields.file.details.image.width}
+          alt={node.data.target.fields.description}
         />)
       }
     }
@@ -81,7 +83,9 @@ export default function NoteDetails({ note }) {
 
   return (
     <div>
-      <title>{ title }</title>
+      <Head>
+        <title>{ title }</title>
+      </Head>
 
       <div className="pageset">
         <SidebarNote/>

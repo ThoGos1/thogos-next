@@ -1,9 +1,12 @@
 import SidebarSolv from "../components/SidebarSolv"
+import Head from "next/head"
 
 export default function Solver() {
     return (
       <div>
-        <title>Solver</title>
+        <Head>
+          <title>Solver</title>
+        </Head>
 
         <div className="pageset">
           
