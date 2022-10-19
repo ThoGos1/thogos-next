@@ -9,10 +9,35 @@ body {
 }
 
 /* Tester CSS*/
-.pageset {
+.noteshow {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-rows: 1000px;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.center {
+  display: grid;
+  place-items: center;
 }
 
 .dropDown {
@@ -25,19 +50,26 @@ button:focus-within .dropDown {
   visibility: visible;
 }
 
+
+
+
+
+
+
+
+
+
+/* Main Page's CSS */
+.pageset {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1000px;
+}
+
 .sidebar {
   background-color: aquamarine;
   margin-right: 16px;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -99,13 +131,19 @@ button:focus-within .dropDown {
 
 .navbar {
   position: fixed;
-  display: block;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 10fr 1fr;
   width: 100%;
   height: 64px;
-  top: 0%;
   background-color: #ffffff;
   box-shadow: 0 2px 5px #0000004d;
-  z-index: 10;
+}
+
+.center2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
 }
 
 .toolbar {
@@ -128,6 +166,7 @@ button:focus-within .dropDown {
   color: rgb(0, 0, 0);
   text-decoration: none;
   line-height: 28px;
+  white-space: nowrap;
 }
 
 a:hover {
