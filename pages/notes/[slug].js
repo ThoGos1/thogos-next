@@ -85,6 +85,7 @@ export default function NoteDetails({ note }) {
     <div>
       <Head>
         <title>{ title }</title>
+        <meta name="description" content={"What is/are " + title}/>
       </Head>
 
       <div className="pageset">

@@ -6,6 +6,7 @@ export default function Solver() {
       <div>
         <Head>
           <title>Solver</title>
+          <meta name="description" content="Write something good here and all other heads"/>
         </Head>
 
         <div className="pageset">

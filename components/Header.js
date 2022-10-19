@@ -21,7 +21,7 @@ export default function Header() {
 
 
         <nav>
-          <Link href={'/notepage'}>
+          <Link href={'/notes'}>
             <a className='navitem' style={{ marginRight: '16px', marginLeft: '16px' }}>S-Notes</a>
           </Link>
         </nav>
