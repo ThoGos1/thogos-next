@@ -1,6 +1,5 @@
 import { createClient } from 'contentful';
 import NoteCard from '../components/NoteCard';
-import NoteDetails from './notes/[slug]';
 // first npm install contentful
 // then import the above thing and then make the function as below.
 
@@ -47,7 +46,7 @@ function Greeting(props) {
   return <GuestGreeting />;
 }
 
-export default function Notes({ notes }) {
+export default function Notelist({ notes }) {
   
   console.log(notes);
   
