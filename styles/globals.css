@@ -39,6 +39,15 @@ p {
   background-repeat: no-repeat;
 }
 
+.cardimg {
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .center {
   display: grid;
   place-items: center;
