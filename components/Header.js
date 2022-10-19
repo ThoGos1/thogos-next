@@ -6,9 +6,9 @@ export default function Header() {
   return (
     <div className='navbar'>
 
-      <div style={{ cursor: "pointer" }}>
+      <div style={{ cursor: "pointer", width: "64px", height: "64px", marginLeft: "5px" }}>
         <Link href={'/'}>
-          <div style={{ transform: "translateX(-15px)" }}>
+          <div>
             <Image src={logo} height={64} width={64} alt="ThoGos-logo"/>
           </div>
         </Link>
