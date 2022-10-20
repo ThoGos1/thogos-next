@@ -9,6 +9,7 @@ export default function Home() {
       <Head>
         <title>Home</title>
         <meta name="description" content="Write something good here and all other heads"/>
+        <link rel="shortcut icon" href="logo.png" type='image/png' />
       </Head>
 
       

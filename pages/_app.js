@@ -7,7 +7,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <link rel="shortcut icon" href="logo.png" type='image/png' />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
       
