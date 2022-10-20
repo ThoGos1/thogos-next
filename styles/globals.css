@@ -15,8 +15,11 @@ p {
 /* Tester CSS*/
 .noteshow {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
 }
 
 .card {
@@ -25,23 +28,26 @@ p {
   justify-content: center;
   align-items: center;
   background: #353535;
-  font-size: 3rem;
+  font-size: 30px;
+  line-height: 60px;
   color: #fff;
-  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  box-shadow: rgba(3, 8, 20, 0.2) 0.25px 0.25rem 0.9rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
   height: 100%;
   width: 100%;
-  border-radius: 4px;
-  transition: all 500ms;
+  border-radius: 10px;
+  cursor: pointer;
+  
+  /* Important so the image doesn't cut*/
   overflow: hidden;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .cardimg {
-  background-color: aqua;
+  background-color: whitesmoke;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,24 +119,15 @@ button:focus-within .dropDown {
 .grid {
   display: grid;
   place-items: center;
-  grid-template-rows: 150px 50% 450px;
+  grid-template-rows: 1.7fr 3fr 0.2fr 3.25fr;
 }
 
 .drop {
   animation: dropIn 3s ease forwards;
 }
 @keyframes dropIn {
-  from {transform: translateY(-500px);}
+  from {transform: translateY(-200px);}
   to {transform: translateY(0);}
-}
-
-
-
-/* Layout CSS */
-.layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 
@@ -143,14 +140,12 @@ button:focus-within .dropDown {
 }
 
 .navbar {
-  position: fixed;
   display: grid;
   place-items: center;
   grid-template-columns: 0.5fr 10fr 0.5fr;
   width: 100%;
   height: 64px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px #0000004d;
+  background-color: #fff;
 }
 
 .center2 {
