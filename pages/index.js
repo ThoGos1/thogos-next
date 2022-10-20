@@ -9,10 +9,8 @@ export default function Home() {
       <Head>
         <title>Home</title>
         <meta name="description" content="Write something good here and all other heads"/>
-        <link rel="shortcut icon" href='../public/Logo-dna.png'/>
       </Head>
 
-      
       
       <div></div>
 
