@@ -7,8 +7,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="shortcut icon" href="logo.png" type='image/png' />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
       
       <Script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js" strategy="beforeInteractive" />

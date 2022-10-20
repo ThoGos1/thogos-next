@@ -21,7 +21,7 @@ export default function Home() {
         <span className="logo-3">.com</span>
       </div>
 
-      <Image src={logo} height={213/2.5} width={146/2.5} alt="ThoGos-logo" style={{display: "block"}}/>
+      <Image src={logo} height={213/2.5} width={146/2.5} alt="ThoGos-logo"/>
 
     </div>  
   )
