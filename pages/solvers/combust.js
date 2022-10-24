@@ -1,6 +1,14 @@
 import SidebarSolv from "../../components/SidebarSolv"
 import Head from "next/head"
 
+async function main(){
+  let pyodide = await loadPyodide();
+  console.log(pyodide.runPython("print(1 + 2)"));
+  pyodide.runPython("print(1 + 2)");
+  pyodide.runPython("print('oewdi')");
+}
+main();
+
 export default function Combust() {
   return (
       <div>

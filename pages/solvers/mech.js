@@ -1,5 +1,9 @@
 import SidebarSolv from "../../components/SidebarSolv"
 import Head from "next/head"
+import Script from "next/script"
+import React, { useState } from "react"
+
+var hydg;
 
 export default function Mech() {
     return (
@@ -15,6 +19,19 @@ export default function Mech() {
           
           <div>
             Mech Solver
+            <form>
+              <label>
+                Name:
+                <input 
+                    type="number" 
+                    value={hydg}
+                    onChange={(e) => setHydg(e.target.value)}
+                    class="solvbox"
+                />
+              </label>
+              <input type="submit" value="Submit" style={{marginLeft: '10px'}} maxLength='10'/>
+            </form>
+            <py-script> print('Now you can!') </py-script>
           </div>
           
         </div>

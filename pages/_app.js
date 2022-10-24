@@ -3,6 +3,10 @@ import Layout from '../components/Layout'
 import Script from 'next/script'
 import Head from 'next/head'
 
+// This is for pyodide but I removed it
+//<Script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js" strategy="beforeInteractive" />
+
+
 function MyApp({ Component, pageProps }) {
   return (
     <div>
@@ -15,7 +19,10 @@ function MyApp({ Component, pageProps }) {
         <link rel="mask-icon" href="/favicon_io/favicon.ico" color="#5bba99" />
       </Head>
       
-      <Script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js" strategy="beforeInteractive" />
+      <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+      <Script defer src="https://pyscript.net/latest/pyscript.js" strategy="beforeInteractive" />
+
+
       <Layout>
         <Component {...pageProps} />
       </Layout>

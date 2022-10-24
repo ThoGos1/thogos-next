@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 var out;
 
 async function main(){
@@ -8,13 +6,13 @@ async function main(){
     pyodide.runPython("print(1 + 2)");
     pyodide.runPython("print('oewdi')");
     out = pyodide.runPython(`def sewey():
-    return 3+2 
+    return print("hello sew") 
     sewey()`);
     console.log(out);
 }
 main();
 
-export default function Python({which}) {
+export default function Python() {
     return (
       <div className="python">
         <p>Python is here</p>
