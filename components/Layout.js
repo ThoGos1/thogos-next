@@ -3,15 +3,15 @@ import Header from './Header'
 
 export default function Layout({ children }) {
   return (
-    <div id="page-container">
+    <div>
 
-      <Header className="head"/>
+      <Header/>
 
-      <div id="content-wrap">
+      <div className='putfoot'>
         { children }
       </div>
 
-      <Footer id="footer"/>
+      <Footer/>
 
     </div>
   )
