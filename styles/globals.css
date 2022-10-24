@@ -59,11 +59,6 @@ p {
   place-items: center;
 }
 
-.putfoot {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 
 
@@ -219,3 +214,9 @@ a:hover {
   letter-spacing: normal;
 }
 
+/* Works well for all browsers and window sizes */
+.putfoot {
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
