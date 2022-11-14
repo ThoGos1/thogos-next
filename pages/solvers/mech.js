@@ -1,8 +1,7 @@
 import SidebarSolv from "../../components/SidebarSolv"
 import Head from "next/head"
 import Script from "next/script"
-
-const name = "hello"
+import {longconfig, elementlist, nobleshorthand, longnoblelist, elementnamelist, longelementnamelist, affinitylist, longaffinitylist, ionizationlist, longionizationlist, numelectronlist, longnumelectronlist, ionformlist, longionformlist} from "../data"
 
 export default function Mech() {
 
@@ -30,6 +29,11 @@ export default function Mech() {
             <div id="test-output">s</div>
 
             <div id="out">p</div>
+
+            <p>{longconfig[1]}</p>
+
+            <p>{elementlist[3]}</p>
+
 
           </div>
           
