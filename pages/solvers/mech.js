@@ -23,7 +23,7 @@ export default function Mech() {
             <input type="text" id="test-input"/>
 
 
-            <button id="submit-button" type="submit" py-onClick="func()">OK</button>
+            <button id="submit-button" type="submit">OK</button>
 
 
             <div id="test-output">s</div>
@@ -33,6 +33,7 @@ export default function Mech() {
             <p>{longconfig[1]}</p>
 
             <p>{elementlist[3]}</p>
+
 
 
           </div>
