@@ -20,8 +20,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
         <link rel="manifest" href="/favicon_io/site.webmanifest"></link>
         <link rel="mask-icon" href="/favicon_io/favicon.ico" color="#5bba99" />
-
-        <Script defer src="https://pyscript.net/latest/pyscript.js" strategy="beforeInteractive" />
+        <Script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js" strategy="beforeInteractive" />
       </Head>
       
       <link href="https://fonts.cdnfonts.com/css/cubano" rel="stylesheet" />

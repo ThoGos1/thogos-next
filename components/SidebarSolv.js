@@ -14,7 +14,7 @@ export default function SidebarSolv() {
               <Link href={'/solvers/mech'}>
                 <a style={{ marginRight: '16px', marginLeft: '16px' }}>Mech Analysis</a>
               </Link>
-            </nav>  
+            </nav>
       </div>
     )
   }
