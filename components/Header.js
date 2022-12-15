@@ -18,14 +18,14 @@ export default function Header() {
       <div className='center2'>
         <nav>
           <Link href={'/notes'}>
-            <a className='navitem'>S-Notes</a>
+            <a className='navitem'>Simply Notes</a>
           </Link>
         </nav>
 
 
         <nav>
           <Link href={'/solver'}>
-            <a className='navitem'>Problem Solvers</a>
+            <a className='navitem'>Problem Solver Calculators</a>
           </Link>
         </nav>
       </div>
