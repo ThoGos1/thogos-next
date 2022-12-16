@@ -1,6 +1,6 @@
 import Head from "next/head"
-import logo from "../public/Logo-dna.png"
 import Image from "next/image"
+import tlogo from "../public/t-logo.png"
 
 export default function Home() {
   
@@ -22,7 +22,7 @@ export default function Home() {
         <span className="logo-3">.com</span>
       </div>
 
-      <Image src={logo} height={213/2.5} width={146/2.5} alt="ThoGos-logo"/>
+      <Image src={tlogo} height={85} width={85} alt="ThoGos-logo"/>
 
     </div>  
   )

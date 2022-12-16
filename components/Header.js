@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import logo from '../public/Logo-dna.png'
+import tlogo from "../public/t-logo.png"
+
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
       <div style={{ cursor: "pointer", width: "64px", height: "64px", marginLeft: "15px", marginTop: "15px" }}>
         <Link href={'/'}>
           <div>
-            <Image src={logo} height={213/5} width={146/5} alt="ThoGos-logo"/>
+            <Image src={tlogo} height={42} width={42} alt="ThoGos-logo"/>
           </div>
         </Link>
       </div>
