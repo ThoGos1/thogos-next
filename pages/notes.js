@@ -7,7 +7,7 @@ export default function Notes() {
     return (
       <div>
         <Head>
-          <title>Notes</title>
+          <title>Notes | ThoGos</title>
           <meta name="description" content="Write something good here and all other heads"/>
         </Head>
 

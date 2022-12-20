@@ -6,7 +6,7 @@ export default function Home() {
     <div className="grid">
 
       <Head>
-        <title>Home</title>
+        <title>ThoGos</title>
         <meta name="description" content="Write something good here and all other heads"/>
       </Head>
 

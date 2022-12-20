@@ -5,7 +5,7 @@ export default function Solver() {
     return (
       <div>
         <Head>
-          <title>Solver</title>
+          <title>Solvers | ThoGos</title>
           <meta name="description" content="Write something good here and all other heads"/>
         </Head>
 
