@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import Layout from '../components/Layout'
 import Script from 'next/script'
 import Head from 'next/head'
-import tlogo from "../public/t-logo.png"
 
 // This is for pyodide but I removed it
 //<Script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js" strategy="beforeInteractive" />
@@ -21,6 +20,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
         <link rel="mask-icon" href="/favicon_io/favicon.ico" color="#ea4333" />
+        <link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon" />
         <Script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js" strategy="beforeInteractive" />
       </Head>
       

@@ -75,6 +75,13 @@ img {
   place-items: center;
 }
 
+.logname {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 0.5fr 0.5fr;
+  gap: 1rem;
+  /* background-color: #fff; */
+}
 
 
 
