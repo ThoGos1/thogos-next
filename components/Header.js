@@ -4,15 +4,19 @@ export default function Header() {
   return (
     <div className='navbar'>
 
-      <div style={{ cursor: "pointer", width: "64px", height: "64px", marginLeft: "15px", marginTop: "15px" }}>
+      <div style={{ cursor: "pointer", width: "64px", height: "45px", marginLeft: "15px", marginTop: "15px" }}>
         <Link href={'/'}>
           <div className='logname'>
-            <svg width="35" height="38" viewBox="0 0 180 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M60 200L60 67H120V180C120 191.046 111.046 200 100 200H60Z" fill="#34A855"/>
-              <path d="M0 20C0 8.9543 8.95431 0 20 0L60 0V67H0L0 20Z" fill="#4285F5"/>
-              <path d="M60 91L90 61L120 91L90 121L60 91Z" fill="#FBBC00"/>
-              <path d="M60 0L180 0V47C180 58.0457 171.046 67 160 67H60V0Z" fill="#EA4333"/>
-              <path d="M60 67H120V91H60V67Z" fill="#FBBC00"/>
+            <svg width="42" height="42" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="128" cy="128" r="128" fill="url(#paint0_linear_6_28)"/>
+              <rect x="105.739" y="80.1391" width="44.5217" height="136.904" fill="white"/>
+              <rect x="50.087" y="116.87" width="44.5217" height="155.826" transform="rotate(-90 50.087 116.87)" fill="white"/>
+              <defs>
+              <linearGradient id="paint0_linear_6_28" x1="128" y1="0" x2="128" y2="256" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#F6A74C"/>
+              <stop offset="1" stopColor="#DB672C"/>
+              </linearGradient>
+              </defs>
             </svg>
 
             <p style={{fontSize: "24px"}}>ThoGos</p>
