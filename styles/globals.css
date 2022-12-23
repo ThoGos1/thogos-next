@@ -138,20 +138,19 @@ a {
 /* <nav> */
 .navbar {
   height: var(--nav-size);
-  background-color: var(--bg);
-  padding: 0 1rem;
-  border-bottom: var(--border);
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-
+  grid-template-columns: 0.38fr 0.4fr;
 }
 
 .navlog {
   display: grid;
   place-items: center;
-  grid-template-columns: 0.1fr 0.1fr;
-  gap: 0px;
+  grid-template-columns: 0fr 0fr;
+  gap: 5px;
   font-size: 24px;
+  margin-left: 16px;
+  width: 136px;
+  cursor: pointer;
 }
 
 /* <ul> */
@@ -160,7 +159,7 @@ a {
   height: 100%;
   display: grid;
   place-items: center;
-  grid-template-columns: 0.5fr 10fr 0.5fr;
+  grid-template-columns: 0fr 10fr 0fr;
 }
 
 /* <li> */
@@ -173,21 +172,43 @@ a {
 
 /* Icon Button */
 .icon-button {
+
+  /*
   --button-size: calc(var(--nav-size) * 0.5);
   width: var(--button-size);
   height: var(--button-size);
   background-color: #484a4d;
-  border-radius: 50%;
+  border-radius: 10%;
   padding: 5px;
   margin: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: filter 300ms;
+*/
+
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 11px;
+  padding-top: 11px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  line-height: 28px;
+  white-space: nowrap;  
+
+
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .icon-button:hover {
   filter: brightness(1.2);
+  background-color: rgba(131, 131, 131, 0.2);
 }
 
 .icon-button svg { 
