@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function SidebarSolv() {
     return (
       <div className="sidebar">
-          
             <p style={{ marginTop: '16px', marginLeft: '16px' }}>Sidebar</p>
 
             <nav>
