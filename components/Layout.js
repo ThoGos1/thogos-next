@@ -12,23 +12,31 @@ export default function Layout({ children }) {
     <div>
 
       <Header>
-        <NavItem icon="Notes" />
-        <NavItem icon="Calculators" />
 
-
-        <NavItem icon={ <Image src={cart} height={42} width={42} alt="ThoGos-logo"/> }>
+        <NavItem icon="Notes">
 
           <DropdownMenu />
           
         </NavItem>
 
+        
+        <NavItem icon="Calculators">
+
+          <DropdownMenu />
+
+        </NavItem>
 
 
       </Header>
 
+
+
+
       <div className='putfoot'>
         { children }
       </div>
+
+
 
       <Footer/>
 

@@ -28,6 +28,23 @@ img {
   -ms-user-select: none;
 }
 
+.nomove {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+
+
+
+
+
+
+
 /* Tester CSS*/
 .noteshow {
   display: grid;
@@ -75,14 +92,15 @@ img {
   place-items: center;
 }
 
+/*
 .logname {
   display: grid;
   place-items: center;
   grid-template-columns: 0.5fr 0.5fr;
   gap: 1rem;
-  /* background-color: #fff; */
+  /* background-color: #fff; 
 }
-
+*/
 
 
 
@@ -124,7 +142,16 @@ a {
   padding: 0 1rem;
   border-bottom: var(--border);
   display: grid;
-  grid-template-columns: 5fr 5fr;
+  grid-template-columns: 0.5fr 0.5fr;
+
+}
+
+.navlog {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 0.1fr 0.1fr;
+  gap: 0px;
+  font-size: 24px;
 }
 
 /* <ul> */
@@ -372,9 +399,13 @@ a:hover {
 */
 
 
+
+
+
 /* Footer CSS */
 .footms {
-  background-color: #f2f2f2;
+  /*background-color: #f2f2f2; */
+  background-color: #484a4d;
   bottom: 0;
   width: 100%;
   padding-bottom: 7px;
@@ -384,7 +415,8 @@ a:hover {
 
 .copyright {
   margin: 0;
-  color: #616161;
+  /* color: #616161; */
+  color: #f2f2f2;
   font-size: 11px;
   line-height: 16px;
   font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;

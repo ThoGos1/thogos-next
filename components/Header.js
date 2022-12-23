@@ -8,17 +8,19 @@ import { CSSTransition } from 'react-transition-group';
 
 
 export default function Header(props) {
-  
-
   return (
     <nav className='navbar'>
-      <div>
-        <Image src={tlogo} height={42} width={42} alt="ThoGos-logo"/>
-        <p>ThoGos</p>
-      </div>
-      <ul className='navbar-nav'> {props.children} </ul>
-    </nav>
 
+      <Link href={"/"}>
+        <div className='navlog'>
+          <Image src={tlogo} height={42} width={42} alt="ThoGos-logo" title="ThoGos Home" style={{ cursor: "pointer" } } layout="fixed"/>
+          <p className='nomove' style={{cursor: "pointer"}}>ThoGos</p>
+        </div>
+      </Link>
+
+      <ul className='navbar-nav'> {props.children} </ul>
+
+    </nav>
   )
 }
 
@@ -35,7 +37,6 @@ export function NavItem(props) {
       {open && props.children}
     </li>
   )
-
 }
 
 
