@@ -139,7 +139,7 @@ a {
 .navbar {
   height: var(--nav-size);
   display: grid;
-  grid-template-columns: 0.38fr 0.4fr;
+  grid-template-columns: 0.35fr 0.52fr;
 }
 
 .navlog {
@@ -147,7 +147,7 @@ a {
   place-items: center;
   grid-template-columns: 0fr 0fr;
   gap: 5px;
-  font-size: 24px;
+  font-size: 30px;
   margin-left: 16px;
   width: 136px;
   cursor: pointer;
@@ -195,7 +195,8 @@ a {
   color: rgb(255, 255, 255);
   text-decoration: none;
   line-height: 28px;
-  white-space: nowrap;  
+  white-space: nowrap;
+  font-size: 20px;
 
 
   user-drag: none;
@@ -359,6 +360,7 @@ a {
   grid-template-rows: 0.7fr 1.2fr 0.2fr 1.5fr;
 }
 
+/*
 .drop {
   animation: dropIn 3s ease forwards;
 }
@@ -366,7 +368,7 @@ a {
   from {transform: translateY(-200px);}
   to {transform: translateY(0);}
 }
-
+*/
 
 
 /* Header CSS

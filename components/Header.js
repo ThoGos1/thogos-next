@@ -27,10 +27,27 @@ export default function Header(props) {
 export function NavItem(props) {
 
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    
+    const closeDropdown = e => {
+      if(!(e.srcElement.className == 'icon-button' || e.srcElement.className == 'menu-item')) {
+        setOpen(false);
+      }
+      console.log(e.srcElement.className);
+    };
+
+    document.body.addEventListener('click', closeDropdown);
+
+    return () => document.body.removeEventListener('click', closeDropdown);
+
+  },[]);
+
 
   return (
-    <li className='nav-item'>
-      <a href='#' className='icon-button' onClick={() => setOpen(!open)}>
+    <li ref={menuRef} id="geek" className='nav-item'>
+      <a href='#' className='icon-button' id="geek" onClick={() => setOpen(!open) }>
         {props.icon}
       </a>
 
