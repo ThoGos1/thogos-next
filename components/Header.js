@@ -4,10 +4,9 @@ import Image from 'next/image';
 import tlogo from "../public/svgtaulogo.svg"
 import chev from "../public/chevron.svg"
 import cart from "../public/caret.svg"
+import arrow from "../public/arrow.svg"
 import { CSSTransition } from 'react-transition-group';
 
-var noteop = false;
-var calcop = false;
 
 export default function Header(props) {
   return (
@@ -34,10 +33,10 @@ export function NavItem(props) {
   useEffect(() => {
     
     const closeDropdown = e => {
-      if(!(e.srcElement.className == 'icon-button' || e.srcElement.className == 'menu-item' || e.srcElement.className == 'icon-right')) {
+      if(!(e.srcElement.className == 'icon-button' || e.srcElement.className == 'menu-item' || e.srcElement.className == 'icon-right' || e.srcElement.className == 'chev' || e.srcElement.className == 'arr')) {
         setOpen(false);
       }
-      console.log(e.srcElement.className);
+      console.log(e);
     };
 
     document.body.addEventListener('click', closeDropdown);
@@ -59,27 +58,6 @@ export function NavItem(props) {
 
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -117,18 +95,33 @@ export function DropdownMenu() {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem>My Profile</DropdownItem>
+
           <DropdownItem
-            leftIcon="suir"
-            rightIcon="suir"
+            leftIcon=""
+            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
             goToMenu="settings">
-            Settings
+            Mathematics
           </DropdownItem>
+
           <DropdownItem
-            leftIcon="23"
-            rightIcon="suir"
+            leftIcon=""
+            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
             goToMenu="animals">
-            Animals
+            Chemistry
+          </DropdownItem>
+
+          <DropdownItem
+            leftIcon=""
+            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            goToMenu="animals">
+            Physics
+          </DropdownItem>
+
+          <DropdownItem
+            leftIcon=""
+            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            goToMenu="animals">
+            Biology (Life Science)
           </DropdownItem>
 
         </div>
@@ -141,13 +134,13 @@ export function DropdownMenu() {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon="suir">
-            My Tutorial
+          <DropdownItem goToMenu="main" leftIcon={ <Image src={arrow} height={23} width={23} className="arr"/> }>
+            Mathematics
           </DropdownItem>
-          <DropdownItem leftIcon="suir">HTML</DropdownItem>
-          <DropdownItem leftIcon="suir">CSS</DropdownItem>
-          <DropdownItem leftIcon="suir">JavaScript</DropdownItem>
-          <DropdownItem leftIcon="suir">Awesome!</DropdownItem>
+          <DropdownItem leftIcon="">Algebra</DropdownItem>
+          <DropdownItem leftIcon="">Trigonometry</DropdownItem>
+          <DropdownItem leftIcon="">Geometry</DropdownItem>
+          <DropdownItem leftIcon="">Funtions</DropdownItem>
         </div>
       </CSSTransition>
 
@@ -182,6 +175,60 @@ export function DropdownMenu() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 export function DropdownMenu2() {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
@@ -269,7 +316,7 @@ export function DropdownMenu2() {
     </div>
   );
 }
-
+*/
 
 
 

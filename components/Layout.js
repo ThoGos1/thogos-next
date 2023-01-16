@@ -19,13 +19,6 @@ export default function Layout({ children }) {
           
         </NavItem>
 
-        
-        <NavItem icon="Calculators">
-
-          <DropdownMenu2 />
-
-        </NavItem>
-
 
       </Header>
 
