@@ -1,5 +1,5 @@
 import Footer from './Footer'
-import Header, { DropdownMenu, NavItem } from './Header'
+import Header, { DropdownMenu, NavItem, DropdownMenu2, NavItem2 } from './Header'
 import chev from "../public/chevron.svg"
 import Image from 'next/image'
 import tlogo from "../public/svgtaulogo.svg"
@@ -22,7 +22,7 @@ export default function Layout({ children }) {
         
         <NavItem icon="Calculators">
 
-          <DropdownMenu />
+          <DropdownMenu2 />
 
         </NavItem>
 

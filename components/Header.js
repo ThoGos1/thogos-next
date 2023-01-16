@@ -6,6 +6,8 @@ import chev from "../public/chevron.svg"
 import cart from "../public/caret.svg"
 import { CSSTransition } from 'react-transition-group';
 
+var noteop = false;
+var calcop = false;
 
 export default function Header(props) {
   return (
@@ -27,12 +29,12 @@ export default function Header(props) {
 export function NavItem(props) {
 
   const [open, setOpen] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef('gekk');
 
   useEffect(() => {
     
     const closeDropdown = e => {
-      if(!(e.srcElement.className == 'icon-button' || e.srcElement.className == 'menu-item')) {
+      if(!(e.srcElement.className == 'icon-button' || e.srcElement.className == 'menu-item' || e.srcElement.className == 'icon-right')) {
         setOpen(false);
       }
       console.log(e.srcElement.className);
@@ -46,15 +48,39 @@ export function NavItem(props) {
 
 
   return (
-    <li ref={menuRef} id="geek" className='nav-item'>
-      <a href='#' className='icon-button' id="geek" onClick={() => setOpen(!open) }>
+    
+    <li ref={menuRef} className='nav-item'>
+      <a href='#' className='icon-button' onClick={() => setOpen(!open) }>
         {props.icon}
       </a>
 
       {open && props.children}
     </li>
+
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 export function DropdownMenu() {
@@ -116,7 +142,7 @@ export function DropdownMenu() {
         onEnter={calcHeight}>
         <div className="menu">
           <DropdownItem goToMenu="main" leftIcon="suir">
-            <h2>My Tutorial</h2>
+            My Tutorial
           </DropdownItem>
           <DropdownItem leftIcon="suir">HTML</DropdownItem>
           <DropdownItem leftIcon="suir">CSS</DropdownItem>
@@ -133,7 +159,7 @@ export function DropdownMenu() {
         onEnter={calcHeight}>
         <div className="menu">
           <DropdownItem goToMenu="main" leftIcon="suir">
-            <h2>Animals</h2>
+            Animals
           </DropdownItem>
           <DropdownItem leftIcon="43">Kangaroo</DropdownItem>
           <DropdownItem leftIcon="34">Frog</DropdownItem>
@@ -144,6 +170,112 @@ export function DropdownMenu() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+export function DropdownMenu2() {
+  const [activeMenu, setActiveMenu] = useState('main');
+  const [menuHeight, setMenuHeight] = useState(null);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
+  }, [])
+
+  function calcHeight(el) {
+    const height = el.offsetHeight;
+    setMenuHeight(height);
+  }
+
+  function DropdownItem2(props) {
+    return (
+      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+        <span className="icon-button">{props.leftIcon}</span>
+        {props.children}
+        <span className="icon-right">{props.rightIcon}</span>
+      </a>
+    );
+  }
+
+  return (
+    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+
+      <CSSTransition
+        in={activeMenu === 'main'}
+        timeout={500}
+        classNames="menu-primary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem2>2 worked</DropdownItem2>
+          <DropdownItem2
+            leftIcon="suir"
+            rightIcon="suir"
+            goToMenu="settings">
+            Settings
+          </DropdownItem2>
+          <DropdownItem2
+            leftIcon="23"
+            rightIcon="suir"
+            goToMenu="animals">
+            Animals
+          </DropdownItem2>
+
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'settings'}
+        timeout={500}
+        classNames="menu-secondary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem2 goToMenu="main" leftIcon="suir">
+            My Tutorial
+          </DropdownItem2>
+          <DropdownItem2 leftIcon="suir">HTML</DropdownItem2>
+          <DropdownItem2 leftIcon="suir">CSS</DropdownItem2>
+          <DropdownItem2 leftIcon="suir">JavaScript</DropdownItem2>
+          <DropdownItem2 leftIcon="suir">Awesome!</DropdownItem2>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'animals'}
+        timeout={500}
+        classNames="menu-secondary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem2 goToMenu="main" leftIcon="suir">
+            Animals
+          </DropdownItem2>
+          <DropdownItem2 leftIcon="43">Kangaroo</DropdownItem2>
+          <DropdownItem2 leftIcon="34">Frog</DropdownItem2>
+          <DropdownItem2 leftIcon="45">Horse?</DropdownItem2>
+          <DropdownItem2 leftIcon="123">Hedgehog</DropdownItem2>
+        </div>
+      </CSSTransition>
+    </div>
+  );
+}
+
+
+
+
+
+
+
 
 
 
