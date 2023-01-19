@@ -90,7 +90,7 @@ export default function Mech() {
                 <input 
                     type="number" 
                     value={hydg}
-                    onChange={(e) => setHydg(e.target.value)}
+                    onChange={(e) => setHydg(parseFloat(e.target.value))}
                     className="solvbox"
                 />
               </label>
