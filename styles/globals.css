@@ -37,6 +37,16 @@ img {
   -ms-user-select: none;
 }
 
+/* These remove the arrows on number text field, as they are weird */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 
 
 

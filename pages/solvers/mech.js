@@ -14,6 +14,10 @@ export default function Mech() {
     console.log(hydg);
     setOutput(hydg);
 
+    if(hydg == "") {
+      return;
+    }
+
 
     if (typeof window !== 'undefined') {
       // Use the window object here
@@ -41,8 +45,6 @@ export default function Mech() {
 
     }
   }
-
-
 
 
 
