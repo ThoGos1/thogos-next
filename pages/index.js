@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
 
-      <svg width="200" height="204.5" viewBox="0 0 798 816" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="200" height="204.5" viewBox="0 0 798 816" fill="none" xmlns="http://www.w3.org/2000/svg" alt="all-logos">
         <circle cx="128" cy="128" r="128" fill="url(#paint0_linear_13_95)"/>
         <rect x="105.739" y="80.1392" width="44.5217" height="136.904" fill="white"/>
         <rect x="50.0869" y="116.87" width="44.5217" height="155.826" transform="rotate(-90 50.0869 116.87)" fill="white"/>

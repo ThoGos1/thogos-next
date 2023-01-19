@@ -13,7 +13,7 @@ export default function Header(props) {
 
       <Link href={"/"}>
         <div className='navlog'>
-          <Image src={tlogo} height={42} width={42} alt="ThoGos-logo" title="ThoGos Home" layout="fixed"/>
+          <Image src={tlogo} height={42} width={42} alt="logo" title="ThoGos Home" layout="fixed"/>
           <p className='nomove'>ThoGos</p>
         </div>
       </Link>
