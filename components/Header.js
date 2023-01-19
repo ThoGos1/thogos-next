@@ -49,7 +49,7 @@ export function NavItem(props) {
   useEffect(() => {
     
     const closeDropdown = e => {
-      if(!(e.srcElement.className == 'calc-button' || e.srcElement.className == 'chev2' || e.srcElement.className == 'menu-item')) {
+      if(!(e.srcElement.className == 'calc-button')) {
         setOpen2(false);
       }
       console.log(e.srcElement.className);
@@ -85,28 +85,25 @@ export function NavItem(props) {
 
       <div style={{ display: open2 ? 'block' : 'none' }} className="calcdropdown">
         
-        <li>
-          <a className="menu-item" id='make this a Link, and just link to first solve of topic'>
+        <Link href={"/solvers/combust"}>
+          <a className="menu-item">
             <span className="calc-button"></span>
             Chemistry
             <span className="icon-chev">{ <Image src={chev} height={23} width={23} className="chev2"/> }</span>
           </a>
-        </li>
+        </Link>
 
-        <li>
+        <Link href={"/solvers/mech"}>
           <a className="menu-item">
             <span className="calc-button"></span>
             Physics
             <span className="icon-chev">{ <Image src={chev} height={23} width={23} className="chev2"/> }</span>
           </a>
-        </li>
+        </Link>
 
       </div>
 
-
-
     </div>
-
   )
 }
 
