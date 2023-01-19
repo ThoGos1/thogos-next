@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import tlogo from "../public/svgtaulogo.svg"
 import chev from "../public/chevron.svg"
-import cart from "../public/caret.svg"
 import arrow from "../public/arrow.svg"
 import { CSSTransition } from 'react-transition-group';
 
@@ -30,13 +29,15 @@ export function NavItem(props) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef('gekk');
 
+  const [open2, setOpen2] = useState(false);
+
   useEffect(() => {
     
     const closeDropdown = e => {
       if(!(e.srcElement.className == 'icon-button' || e.srcElement.className == 'menu-item' || e.srcElement.className == 'icon-right' || e.srcElement.className == 'chev' || e.srcElement.className == 'arr')) {
         setOpen(false);
       }
-      console.log(e);
+      console.log(e.srcElement.className);
     };
 
     document.body.addEventListener('click', closeDropdown);
@@ -45,16 +46,66 @@ export function NavItem(props) {
 
   },[]);
 
+  useEffect(() => {
+    
+    const closeDropdown = e => {
+      if(!(e.srcElement.className == 'calc-button' || e.srcElement.className == 'chev2' || e.srcElement.className == 'menu-item')) {
+        setOpen2(false);
+      }
+      console.log(e.srcElement.className);
+    };
+
+    document.body.addEventListener('click', closeDropdown);
+
+    return () => document.body.removeEventListener('click', closeDropdown);
+
+  },[]);
+
+  function closeall() {
+    setOpen(false);
+    setOpen2(false);
+  }
+
 
   return (
-    
-    <li ref={menuRef} className='nav-item'>
-      <a href='#' className='icon-button' onClick={() => setOpen(!open) }>
-        {props.icon}
-      </a>
+    <div className='head-grid'>
+      <li ref={menuRef} className='nav-item'>
+        <a className='icon-button' onClick={() => { closeall(); setOpen(!open); }}>
+          {props.icon}
+        </a>
 
-      {open && props.children}
-    </li>
+        {open && props.children}
+      </li>
+
+      <li className='nav-item'>
+        <a className='calc-button' onClick={() => { closeall(); setOpen2(!open2); }}>
+          Calculators
+        </a>
+      </li>
+
+      <div style={{ display: open2 ? 'block' : 'none' }} className="calcdropdown">
+        
+        <li>
+          <a className="menu-item" id='make this a Link, and just link to first solve of topic'>
+            <span className="calc-button"></span>
+            Chemistry
+            <span className="icon-chev">{ <Image src={chev} height={23} width={23} className="chev2"/> }</span>
+          </a>
+        </li>
+
+        <li>
+          <a className="menu-item">
+            <span className="calc-button"></span>
+            Physics
+            <span className="icon-chev">{ <Image src={chev} height={23} width={23} className="chev2"/> }</span>
+          </a>
+        </li>
+
+      </div>
+
+
+
+    </div>
 
   )
 }
@@ -77,7 +128,7 @@ export function DropdownMenu() {
 
   function DropdownItem(props) {
     return (
-      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <a className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
         <span className="icon-button">{props.leftIcon}</span>
         {props.children}
         <span className="icon-right">{props.rightIcon}</span>
