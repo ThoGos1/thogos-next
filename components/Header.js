@@ -37,7 +37,7 @@ export function NavItem(props) {
       if(!(e.srcElement.className == 'icon-button' || e.srcElement.className == 'menu-item' || e.srcElement.className == 'icon-right' || e.srcElement.className == 'chev' || e.srcElement.className == 'arr')) {
         setOpen(false);
       }
-      console.log(e.srcElement.className);
+      //console.log(e.srcElement.className);
     };
 
     document.body.addEventListener('click', closeDropdown);
@@ -52,7 +52,7 @@ export function NavItem(props) {
       if(!(e.srcElement.className == 'calc-button')) {
         setOpen2(false);
       }
-      console.log(e.srcElement.className);
+      //console.log(e.srcElement.className);
     };
 
     document.body.addEventListener('click', closeDropdown);

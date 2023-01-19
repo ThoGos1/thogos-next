@@ -12,11 +12,15 @@ export default function Mech() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(hydg);
-    setOutput("loading...");
 
     if(hydg == "") {
+      console.log("fail dood");
       return;
     }
+
+    setOutput("Calculating...");
+
+
 
     if (typeof window !== 'undefined') {
       // Use the window object here
