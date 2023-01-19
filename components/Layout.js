@@ -12,14 +12,9 @@ export default function Layout({ children }) {
     <div>
 
       <Header>
-
         <NavItem icon="Notes">
-
           <DropdownMenu />
-          
         </NavItem>
-
-
       </Header>
 
 
