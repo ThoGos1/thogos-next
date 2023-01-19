@@ -12,7 +12,7 @@ export default function Mech() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(hydg);
-    setOutput(hydg);
+    setOutput("loading...");
 
     if(hydg == "") {
       return;
