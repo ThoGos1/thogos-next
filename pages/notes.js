@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Image from "next/image"
-import chemlogo from "../public/chemistry.jpg"
+import chemlogo from "../public/logo.png"
 import Link from "next/link"
 
 export default function Notes() {
