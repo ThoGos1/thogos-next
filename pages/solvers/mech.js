@@ -18,7 +18,6 @@ export default function Mech() {
       return;
     }
 
-
     if (typeof window !== 'undefined') {
       // Use the window object here
       console.log(window.innerWidth);
