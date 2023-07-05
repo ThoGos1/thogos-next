@@ -4,7 +4,7 @@ export default function Footer() {
 
             <div className="downbar">
               <div style={{ width: "94%" }}></div>
-              <p className="copyright">© Thomas Gosvig 2022</p>
+              <p className="copyright">© Thomas Gosvig 2023</p>
             </div>
 
           </div>

@@ -6,7 +6,7 @@ export default function Home() {
     <div className="grid">
 
       <Head>
-        <title>ThoGos</title>
+        <title>JavaLite</title>
         <meta name="description" content="Write something good here and all other heads"/>
       </Head>
 
@@ -16,7 +16,7 @@ export default function Home() {
 
       <div>
         <span id="behind" className="logo-1 drop">Welcome to</span>
-        <span className="logo-2">ThoGos</span>
+        <span className="logo-2">JavaLite</span>
         <span className="logo-3">.com</span>
       </div>
 

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import clogo from "../public/calclogo.svg"
 import tlogo from "../public/svgtaulogo.svg"
 import chev from "../public/chevron.svg"
 import arrow from "../public/arrow.svg"
@@ -13,8 +14,8 @@ export default function Header(props) {
 
       <Link href={"/"}>
         <div className='navlog'>
-          <Image src={tlogo} height={42} width={42} alt="logo" title="ThoGos Home" layout="fixed"/>
-          <p className='nomove'>ThoGos</p>
+          <Image src={clogo} height={42} width={42} alt="logo" title="ThoGos Home" layout="fixed"/>
+          <p className='nomove'>JavaLite</p>
         </div>
       </Link>
 
