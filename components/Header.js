@@ -15,7 +15,7 @@ export default function Header(props) {
       <Link href={"/"}>
         <div className='navlog'>
           <Image src={clogo} height={42} width={42} alt="logo" title="ThoGos Home" layout="fixed"/>
-          <p className='nomove'>JavaLite</p>
+          <p className='nomove' style={{fontWeight: 'bold'}}>JavaLite</p>
         </div>
       </Link>
 
@@ -171,6 +171,20 @@ export function DropdownMenu() {
             rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
             goToMenu="animals">
             Biology (Life Science)
+          </DropdownItem>
+
+          <DropdownItem
+            leftIcon=""
+            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            goToMenu="animals">
+            Organic Chemistry
+          </DropdownItem>
+
+          <DropdownItem
+            leftIcon=""
+            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            goToMenu="animals">
+            Biochemistry Lab
           </DropdownItem>
 
         </div>
