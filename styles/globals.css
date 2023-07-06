@@ -529,3 +529,13 @@ a:hover {
   flex-direction: column;
   min-height: 95vh;
 }
+
+
+/* 3 inputs */
+.inputtre {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.2fr;
+  gap: 10px;
+}
+

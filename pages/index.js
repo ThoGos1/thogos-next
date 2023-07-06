@@ -20,6 +20,8 @@ export default function Home() {
         <span className="logo-3">.com</span>
       </div>
 
+      
+
 
 
 
