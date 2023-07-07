@@ -13,12 +13,12 @@ async function main(code){
 main('lol');
 */
 
+
 export default function Combust() {
   const [output, setOutput] = useState("(enter a value above)");
   const [hydg, setHydg] = useState(0);
   const [co2, setCo2] = useState(0);
   const [molmass, setMolmass] = useState(0);
-
 
 
   const handleSubmit = (event) => {
@@ -27,6 +27,12 @@ export default function Combust() {
     console.log(co2);
     console.log(molmass);
 
+    if(isNaN(molmass)) {
+      //setMolmass(0)
+      console.log('is nan')
+      console.log('new' + molmass)
+    }
+
     if(hydg == "") {
       console.log("fail dood");
       return;
@@ -34,11 +40,9 @@ export default function Combust() {
 
     setOutput("Calculating...");
 
-
-
     if (typeof window !== 'undefined') {
       // Use the window object here
-      console.log(window.innerWidth);
+      // console.log(window.innerWidth);
       const initPyodide = window.loadPyodide({
         indexURL: "https://cdn.jsdelivr.net/pyodide/v0.21.3/full/",
       })
@@ -47,10 +51,6 @@ export default function Combust() {
         let pyodide = await initPyodide;
         return await pyodide.runPythonAsync(kw);
       }
-    
-      main(`print(${hydg}/2)`);
-      main(`print(${co2}/2)`);
-      main(`print(${molmass}/2)`);
 
       
       out = main(`
@@ -84,18 +84,14 @@ export default function Combust() {
               vand = facm
       
       
-          # Check if it's the first or second type in the if-statement
-          print("Empirical formula: " + "C" + str(carb) + "H" + str(vand))
-      
           mass = round(w/(carb*12 + vand))
-          print("massfac = " + str(mass))
           print("Actual Formula: " + "C" + str(carb*mass) + "H" + str(vand*mass))
 
-          return [carb, vand]
+          
+
+          return "C" + str(carb) + "H" + str(vand)
           
       getEmp2(${hydg}, ${co2}, ${molmass})`);
-      
-
       
 
 
@@ -103,8 +99,10 @@ export default function Combust() {
 
 
       out.then(function(val) {
-        setOutput(parseFloat(val));
-        console.log(parseFloat(val));
+        console.log(val);
+        setOutput(val)
+        //setOutput(parseFloat(val));
+        //console.log(parseFloat(val));
       });
 
     }
@@ -159,8 +157,8 @@ export default function Combust() {
                 <input
                   type="number"
                   step={"any"}
-                  required
-                  onChange={(e) => setMolmass(parseFloat(e.target.value))}
+                  
+                  onChange={(e) => setMolmass(   isNaN(parseFloat(e.target.value)) ? 0 : parseFloat(e.target.value)    )}
                   className="solvbox"
                   id="value={hydg}"
                 />
@@ -171,7 +169,7 @@ export default function Combust() {
 
           
 
-          <p>python = {output} moles of Hydrogen<br/>refresh page if it's stuck loading</p>
+          <p>Empirical Formula = {output} <br/>refresh page if it's stuck loading</p>
 
           <div id="out"></div>
 
