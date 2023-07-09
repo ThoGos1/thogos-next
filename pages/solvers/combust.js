@@ -15,7 +15,7 @@ main('lol');
 
 
 export default function Combust() {
-  const [output, setOutput] = useState("(enter a value above)");
+  const [output, setOutput] = useState([]);
   const [hydg, setHydg] = useState(0);
   const [co2, setCo2] = useState(0);
   const [molmass, setMolmass] = useState(0);
@@ -38,7 +38,7 @@ export default function Combust() {
       return;
     }
 
-    setOutput("Calculating...");
+    setOutput(["Calculating...", "Calculating..."]);
 
     if (typeof window !== 'undefined') {
       // Use the window object here
@@ -52,7 +52,6 @@ export default function Combust() {
         return await pyodide.runPythonAsync(kw);
       }
 
-      
       out = main(`
       def comfac(n):
           fac = 1
@@ -83,24 +82,21 @@ export default function Combust() {
               carb = int(round(round(1/ratio, 2) * facm))
               vand = facm
       
-      
           mass = round(w/(carb*12 + vand))
-          print("Actual Formula: " + "C" + str(carb*mass) + "H" + str(vand*mass))
 
-          
+          if w == 0:
+              return "C" + str(carb) + "H" + str(vand)
+          else:
+              return "C" + str(carb) + "H" + str(vand) + " C" + str(carb*mass) + "H" + str(vand*mass)
 
-          return "C" + str(carb) + "H" + str(vand)
           
       getEmp2(${hydg}, ${co2}, ${molmass})`);
       
-
-
-
-
-
       out.then(function(val) {
-        console.log(val);
-        setOutput(val)
+        const [firstString, ...remainingStrings] = val.split(' ');
+        const secondString = remainingStrings.join(' ');
+        console.log([firstString, secondString]);
+        setOutput([firstString, secondString]);
         //setOutput(parseFloat(val));
         //console.log(parseFloat(val));
       });
@@ -111,7 +107,7 @@ export default function Combust() {
   // ------------------------------------------------------------------ //
 
   return (
-      <div>
+    <div>
       <Head>
         <title>CxHy Combustion</title>
         <meta name="description" content="Write something good here and all other heads"/>
@@ -167,9 +163,7 @@ export default function Combust() {
             <input type="submit" value="Submit" style={{marginLeft: '10px'}} maxLength='10'/>
           </form>
 
-          
-
-          <p>Empirical Formula = {output} <br/>refresh page if it's stuck loading</p>
+          <p>Empirical Formula = {output[0]} <br/> Molecular Formula = {output[1] == "" ? "Molecular mass missing" : output[1]} <br/>Refresh page if it's stuck loading</p>
 
           <div id="out"></div>
 
