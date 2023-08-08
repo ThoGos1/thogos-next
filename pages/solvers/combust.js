@@ -120,7 +120,7 @@ export default function Combust() {
         <div className="Stuff has to be inside this div, not outside">
           <h1>CxHy Combustion Analysis</h1>
           <h2>Determining Empirical Formula and Molecular Formula</h2>
-          <p>Combust Solver</p>
+          <h3>Powered by Pyodide</h3>
 
 
           <form onSubmit={handleSubmit} id="watergram" className="inputtre">

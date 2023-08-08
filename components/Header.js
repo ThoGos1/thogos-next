@@ -6,6 +6,7 @@ import tlogo from "../public/svgtaulogo.svg"
 import chev from "../public/chevron.svg"
 import arrow from "../public/arrow.svg"
 import { CSSTransition } from 'react-transition-group';
+import blchev from "../public/blchev.svg"
 
 
 export default function Header(props) {
@@ -90,7 +91,7 @@ export function NavItem(props) {
           <a className="menu-item">
             <span className="calc-button"></span>
             Chemistry
-            <span className="icon-chev">{ <Image src={chev} height={23} width={23} className="chev2"/> }</span>
+            <span className="icon-chev">{ <Image src={blchev} height={23} width={23} className="chev2"/> }</span>
           </a>
         </Link>
 
@@ -98,7 +99,7 @@ export function NavItem(props) {
           <a className="menu-item">
             <span className="calc-button"></span>
             Physics
-            <span className="icon-chev">{ <Image src={chev} height={23} width={23} className="chev2"/> }</span>
+            <span className="icon-chev">{ <Image src={blchev} height={23} width={23} className="chev2"/> }</span>
           </a>
         </Link>
 
@@ -147,42 +148,42 @@ export function DropdownMenu() {
 
           <DropdownItem
             leftIcon=""
-            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            rightIcon={ <Image src={blchev} height={23} width={23} className="chev"/> }
             goToMenu="settings">
             Mathematics
           </DropdownItem>
 
           <DropdownItem
             leftIcon=""
-            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            rightIcon={ <Image src={blchev} height={23} width={23} className="chev"/> }
             goToMenu="animals">
             Chemistry
           </DropdownItem>
 
           <DropdownItem
             leftIcon=""
-            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            rightIcon={ <Image src={blchev} height={23} width={23} className="chev"/> }
             goToMenu="animals">
             Physics
           </DropdownItem>
 
           <DropdownItem
             leftIcon=""
-            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            rightIcon={ <Image src={blchev} height={23} width={23} className="chev"/> }
             goToMenu="animals">
             Biology (Life Science)
           </DropdownItem>
 
           <DropdownItem
             leftIcon=""
-            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            rightIcon={ <Image src={blchev} height={23} width={23} className="chev"/> }
             goToMenu="animals">
             Organic Chemistry
           </DropdownItem>
 
           <DropdownItem
             leftIcon=""
-            rightIcon={ <Image src={chev} height={23} width={23} className="chev"/> }
+            rightIcon={ <Image src={blchev} height={23} width={23} className="chev"/> }
             goToMenu="animals">
             Biochemistry Lab
           </DropdownItem>

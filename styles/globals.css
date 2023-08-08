@@ -7,13 +7,13 @@ body {
   /* font-family: cubano, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(176deg,rgb(15,15,15) 50%,rgb(30,30,30) 100%);
+  /* background: linear-gradient(176deg,rgb(15,15,15) 50%,rgb(30,30,30) 100%); */
   /* background: linear-gradient(160deg,rgb(4,29,44) 20%,rgb(3, 50, 145) 100%); */
   /* background-color: rgb(4,29,44); */
-  background-color: rgb(15,15,15);
+  /* background-color: rgb(15,15,15); */
   min-height: 100vh;
   background-attachment: fixed;
-  color: white;
+  /* color: white; */
 }
 
 p {
@@ -60,7 +60,7 @@ input[type=number] {
 .noteshow {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
@@ -103,6 +103,16 @@ input[type=number] {
   place-items: center;
 }
 
+.featurednote {
+  background-color: rgba(0, 0, 255,255);
+  padding: 20px;
+}
+
+.featuredsolv {
+  background-color: rgba(45,112,42,255);
+  padding: 20px;
+}
+
 /*
 .logname {
   display: grid;
@@ -124,13 +134,12 @@ input[type=number] {
 
 
 :root {
-  --bg:  #242526;
-  --bg-accent: #484a4d;
-  --text-color: #dadce1;
+  --bg:  #ffffff;
+  --text-color: rgb(5,5,5);
   --nav-size: 64px;
-  --border: 1px solid #474a4d;
+  --border: 1px solid #f0f2f5;
   --border-radius: 8px;
-  --speed: 500ms; 
+  --speed: 500ms;
 }
 
 ul {
@@ -190,7 +199,7 @@ a {
   padding-bottom: 12px;
   padding-top: 18px;
   border-radius: 4px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   line-height: 28px;
   white-space: nowrap;
@@ -235,7 +244,7 @@ a {
   padding-bottom: 12px;
   padding-top: 18px;
   border-radius: 4px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   line-height: 28px;
   white-space: nowrap;
@@ -280,6 +289,7 @@ a {
   overflow: hidden;
   transition: height var(--speed) ease;
   font-size: 18px;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.07);
 }
 
 .calcdropdown {
@@ -294,6 +304,7 @@ a {
   overflow: hidden;
   transition: height var(--speed) ease;
   font-size: 18px;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.07);
 }
 
 .menu {
@@ -320,7 +331,7 @@ a {
 }
 
 .menu-item:hover {
-  background-color: #525357;
+  background-color: #f2f2f3;
 }
 
 .icon-right {
@@ -424,7 +435,8 @@ a {
 .grid {
   display: grid;
   place-items: center;
-  grid-template-rows: 0.7fr 1.2fr 0.2fr 1.5fr;
+  /* grid-template-rows: 0.7fr 1.2fr 0.2fr 1.5fr; */
+  grid-template-rows: 3.5fr 1.7fr 6fr;
 }
 
 /*
