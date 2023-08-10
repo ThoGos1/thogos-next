@@ -3,7 +3,7 @@ import Image from "next/image"
 import chemlogo from "../public/chemfeat.png"
 import Link from "next/link"
 import blchev from "../public/blchev.svg"
-
+import buttup from "../public/upbut.svg"
 
 
 
@@ -43,10 +43,10 @@ export default function Home() {
 
 
     </div>
-
+    
 
     <div className="featurednote">
-      <h1 style={{padding: "20px", color: "white"}}>Featured Notes:</h1>
+      <h1 style={{padding: "20px", color: "white", borderTop: "1px solid white"}}>Featured Notes:</h1>
 
       <div className="noteshow">
 
@@ -80,17 +80,15 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="center" style={{padding: "100px"}}>
+    <div className="center" style={{padding: "60px"}}>
       <h1>Check out all of the Notes and Calculators in the menu above.</h1>
-      <button className="absolute bottom-0 p-10" onClick={scrollToTop}>
-        Up
-      </button>
+      <Image src={buttup} height={40} width={40} onClick={scrollToTop} style={{cursor: "pointer"}} />
     </div>
     
 
 
     <div className="featuredsolv">
-      <h1 style={{padding: "20px", color: "white"}}>Featured Calculators:</h1>
+      <h1 style={{padding: "20px", color: "white", borderTop: "1px solid white"}}>Featured Calculators:</h1>
 
       <div className="noteshow">
 

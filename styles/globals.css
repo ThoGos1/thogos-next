@@ -137,7 +137,7 @@ input[type=number] {
   --bg:  #ffffff;
   --text-color: rgb(5,5,5);
   --nav-size: 64px;
-  --border: 1px solid #f0f2f5;
+  --border: 2px solid #f0f2f5;
   --border-radius: 8px;
   --speed: 500ms;
 }

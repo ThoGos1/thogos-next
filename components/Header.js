@@ -198,7 +198,7 @@ export function DropdownMenu() {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={ <Image src={arrow} height={23} width={23} className="arr"/> }>
+          <DropdownItem goToMenu="main" leftIcon={ <Image src={arrow} height={21} width={21} className="arr"/> }>
             Mathematics
           </DropdownItem>
           <DropdownItem leftIcon="">Algebra</DropdownItem>
