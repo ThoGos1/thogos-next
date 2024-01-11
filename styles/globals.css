@@ -56,11 +56,11 @@ input[type=number] {
 
 
 
-/* Tester CSS*/
+/* Index Feature Cards */
 .noteshow {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
@@ -81,7 +81,8 @@ input[type=number] {
   border-radius: 10px;
   cursor: pointer;
   
-  /* Important so the image doesn't cut*/
+  
+  /* Important so the image doesn't cut */
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -89,7 +90,6 @@ input[type=number] {
 }
 
 .cardimg {
-  background-color: whitesmoke;
   width: 100%;
   height: 100%;
   display: flex;
@@ -121,6 +121,17 @@ input[type=number] {
   gap: 1rem;
   /* background-color: #fff; 
 }
+
+.cardimg {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 */
 
 
@@ -131,7 +142,7 @@ input[type=number] {
 
 
 
-
+/* Navbar business */
 
 :root {
   --bg:  #ffffff;

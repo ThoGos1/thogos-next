@@ -188,6 +188,16 @@ export function DropdownMenu() {
             Biochemistry Lab
           </DropdownItem>
 
+          <p style={{padding: "40px", paddingTop: "0px", paddingBottom: "0px", color: "black", borderTop: "1px solid black", margin: "10px"}}></p>
+
+          <DropdownItem
+            leftIcon=""
+            rightIcon={ <Image src={blchev} height={23} width={23} className="chev"/> }
+            goToMenu="animals">
+            Dansk Matematik
+          </DropdownItem>
+
+
         </div>
       </CSSTransition>
 
@@ -205,6 +215,7 @@ export function DropdownMenu() {
           <DropdownItem leftIcon="">Trigonometry</DropdownItem>
           <DropdownItem leftIcon="">Geometry</DropdownItem>
           <DropdownItem leftIcon="">Funtions</DropdownItem>
+          <DropdownItem leftIcon="">Maple Tasks</DropdownItem>
         </div>
       </CSSTransition>
 

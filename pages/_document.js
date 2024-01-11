@@ -1,10 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
-
-//         <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-
-
 export default function Document() {
   return (
     <Html id='thogos' lang='en'>

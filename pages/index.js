@@ -53,7 +53,7 @@ export default function Home() {
           <Link href={'notes/test-note'}>
             <div className="card">
               <div className="cardimg">
-                <Image src={chemlogo} height={186} width={186} alt="ThoGos-logo"/>
+                <Image src={chemlogo} height={982} width={982} alt="ThoGos-logo" />
               </div>
               <p>Chemistry</p>
             </div>
@@ -62,7 +62,7 @@ export default function Home() {
           <Link href={'notes/test-note'}>
             <div className="card">
               <div className="cardimg">
-                <Image src={chemlogo} height={186} width={186} alt="ThoGos-logo"/>
+                <Image src={chemlogo} height={982} width={982} alt="ThoGos-logo"/>
               </div>
               <p>Physics</p>
             </div>
@@ -71,7 +71,7 @@ export default function Home() {
           <Link href={'notes/test-note'}>
             <div className="card">
               <div className="cardimg">
-                <Image src={chemlogo} height={186} width={186} alt="ThoGos-logo"/>
+                <Image src={chemlogo} height={982} width={982} alt="ThoGos-logo"/>
               </div>
               <p>Mathematics</p>
             </div>
@@ -95,7 +95,7 @@ export default function Home() {
           <Link href={'notes/test-note'}>
             <div className="card">
               <div className="cardimg">
-                <Image src={chemlogo} height={186} width={186} alt="ThoGos-logo"/>
+                <Image src={chemlogo} height={982} width={982} alt="ThoGos-logo"/>
               </div>
               <p>Combust HxHy</p>
             </div>
@@ -104,7 +104,7 @@ export default function Home() {
           <Link href={'notes/test-note'}>
             <div className="card">
               <div className="cardimg">
-                <Image src={chemlogo} height={186} width={186} alt="ThoGos-logo"/>
+                <Image src={chemlogo} height={982} width={982} alt="ThoGos-logo"/>
               </div>
               <p>bla bla</p>
             </div>
@@ -113,7 +113,7 @@ export default function Home() {
           <Link href={'notes/test-note'}>
             <div className="card">
               <div className="cardimg">
-                <Image src={chemlogo} height={186} width={186} alt="ThoGos-logo"/>
+                <Image src={chemlogo} height={982} width={982} alt="ThoGos-logo"/>
               </div>
               <p>bla bla</p>
             </div>
